@@ -1,0 +1,14 @@
+{
+    "HomePage": {
+        "title": "Sveiki atvykę į mūsų svetainę",
+        "description": "Tai yra mūsų svetainės pagrindinis puslapis, kur galite rasti įvairių išteklių ir informacijos."
+    },
+
+    "Header": {
+        "homepage": "Pagrindinis",
+        "about": "Apie Mane",
+        "work": "Mano Darbai",
+        "contact": "Kontaktai",
+        "talk": "Pasikalbėkime"
+    }
+}
