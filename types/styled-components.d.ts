@@ -2,21 +2,16 @@ import "styled-components";
 import {
     AppBreakpointsType,
     AppColorsType,
-    AppFontWeightType,
-    AppFSType,
-    AppLineHeightsType,
     AppSpacingType,
     AppLayoutType,
-} from "./DesignVariables";
+} from "@/styles/design-variables";
 
 declare module "styled-components" {
     export interface DefaultTheme {
         theme: "atomasTheme";
         colors: AppColorsType;
-        media: AppBreakpointsType;
-        fontWeights: AppFontWeightType;
-        fontSizes: AppFSType;
-        lineHeights: AppLineHeightsType;
+        breakpoints: AppBreakpointsType;
+        typography: AppTypographyType;
         spacings: AppSpacingType;
         layout: AppLayoutType;
     }

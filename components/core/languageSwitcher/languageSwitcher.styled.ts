@@ -1,16 +1,16 @@
 "use client";
-
 import styled from "styled-components";
+import { typography, spacings } from "@/styles/design-variables";
 
 export const LanguageWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 16px;
-    color: #fff;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.2px;
+    gap: ${spacings.s16};
+    color: ${({ theme }) => theme.colors.primaryText};
+    font-family: ${typography.fonts.inter};
+    font-size: ${typography.fontSizes.f16};
+    font-weight: ${typography.fontWeights.medium};
+    line-height: ${typography.lineHeights.lh20};
     letter-spacing: 0.16px;
 `;
 

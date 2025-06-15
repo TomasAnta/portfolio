@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { StyledButton } from "./button.styled";
+import { StyledButton } from "./Button.styled";
 
 interface Props {
     children: React.ReactNode;

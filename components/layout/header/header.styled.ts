@@ -1,60 +1,72 @@
 "use client";
-
 import styled from "styled-components";
+import {
+    colors,
+    layout,
+    spacings,
+    typography,
+} from "@/styles/design-variables";
+import { flexMixin, glowHoverEffect } from "@/styles/mixins";
 
 export const StyledHeader = styled.header`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    ${flexMixin.rowCentered}
 `;
 
 export const StyledNav = styled.nav`
-    padding-top: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1160px;
+    ${flexMixin.rowSpaceBetween}
+    font-family: ${typography.fonts.inter};
+    padding-top: ${spacings.s24};
     margin: 0 auto;
+    max-width: ${layout.maxWidth};
 `;
 
 export const StyledLogo = styled.div`
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 72px;
+    font-size: ${typography.fontSizes.f36};
+    font-family: ${typography.fonts.outfit};
+    font-weight: ${typography.fontWeights.medium};
+    line-height: ${typography.lineHeights.lh72};
     letter-spacing: -2.6px;
-    color: #fff;
+    color: ${colors.primaryText};
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    span {
+        display: inline-block;
+        font-weight: ${typography.fontWeights.light};
+        margin-left: ${spacings.s8};
+        ${glowHoverEffect}
+    }
 `;
 
 export const StyledUl = styled.ul`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 49px;
-    list-style-type: none;
+    ${flexMixin.rowJustifyCenter}
     padding-left: 0;
+    list-style-type: none;
+    gap: ${spacings.s48};
 `;
 
-export const StyledList = styled.li`
-    color: #fff;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 19.2px; /* 120% */
-    letter-spacing: 0.16px;
+export const StyledList = styled.li<{ $active?: boolean }>`
+    color: ${({ $active }) =>
+        $active ? colors.navigation.active : colors.navigation.inactive};
+    font-size: ${typography.fontSizes.f16};
+    font-weight: ${typography.fontWeights.medium};
+    line-height: ${typography.lineHeights.lh20};
+
+    &:hover {
+        color: ${colors.navigation.hover};
+        transition: ${colors.transitions.hover};
+    }
 `;
 
 export const StyledLanguage = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    color: #fff;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 19.2px; /* 120% */
-    letter-spacing: 0.16px;
+    ${flexMixin.rowCentered}
+    gap: ${spacings.s16};
+    color: ${colors.primaryText};
+    font-size: ${typography.fontSizes.f16};
+    font-weight: ${typography.fontWeights.medium};
+    line-height: ${typography.lineHeights.lh20};
 `;

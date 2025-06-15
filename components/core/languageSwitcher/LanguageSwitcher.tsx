@@ -3,7 +3,7 @@
 import { routing } from "@/i18n/routing";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { LanguageWrapper, LangItem } from "./languageSwitcher.styled";
+import { LanguageWrapper, LangItem } from "./LanguageSwitcher.styled";
 
 export default function LanguageSwitcher() {
     const activeLocale = useLocale();

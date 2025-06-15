@@ -1,6 +1,6 @@
 "use client";
-import { atomasTheme } from "@/styles/SystemDesign";
-import GlobalStyle from "@/styles/GlobalStyle";
+import { atomasTheme } from "@/styles/system-design";
+import GlobalStyle from "@/styles/global-style";
 import { ThemeProvider } from "styled-components";
 
 export default function ThemeRegistry({
