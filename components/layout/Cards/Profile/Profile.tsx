@@ -7,6 +7,8 @@ import {
     StyledSpeciality,
     StyledText,
 } from "./Profile.styled";
+import Image from "next/image";
+import ButtonIcon from "@/components/icons/ButtonIcon";
 
 const Profile = () => {
     return (
@@ -17,16 +19,14 @@ const Profile = () => {
             }
             borderColor={"rgba(255, 255, 255, 0.50)"}
             maxWidth={"568px"}
+            gap={"40px"}
         >
             <StyledImage>
-                <img
-                    src="/images/profile-placeholder.png"
-                    alt="Profile"
-                    style={{
-                        width: "100%",
-                        height: "auto",
-                        borderRadius: "50%",
-                    }}
+                <Image
+                    src="/images/profile.png"
+                    alt="Tomas Antanaitis"
+                    width={224}
+                    height={224}
                 />
             </StyledImage>
             <StyledText>
@@ -35,6 +35,7 @@ const Profile = () => {
                 <StyledDescription>
                     I am Front End Developer based in Vilnius, Lithuania.
                 </StyledDescription>
+                <ButtonIcon />
             </StyledText>
         </ContentCard>
     );

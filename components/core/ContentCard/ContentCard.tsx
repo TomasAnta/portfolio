@@ -6,6 +6,7 @@ interface ContentCardProps {
     background: string;
     borderColor: string;
     maxWidth: string;
+    gap?: string;
     children?: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ const ContentCard = ({
     children,
     borderColor,
     maxWidth,
+    gap,
 }: ContentCardProps) => {
     return (
         <StyledCard
@@ -22,6 +24,7 @@ const ContentCard = ({
             $background={background}
             $borderColor={borderColor}
             $maxWidth={maxWidth}
+            $gap={gap}
         >
             {children}
         </StyledCard>
